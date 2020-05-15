@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from tkinter import *
-import tkinter.messagebox as messagebox
+import tkinter.messagebox as message_box
 
 
 class Application(Frame):
@@ -16,7 +16,7 @@ class Application(Frame):
 
     def hello(self):
         name = self.nameInput.get() or 'world'
-        messagebox.showinfo('Message', 'Hello, %s' % name)
+        message_box.showinfo('Message', 'Hello, %s' % name)
 
 
 app = Application()
