@@ -59,8 +59,8 @@ def undopin(p):
 
         p.undo()
 
-fen = clone()
 
+fen = clone()
 
 miao = clone()
 
