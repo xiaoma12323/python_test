@@ -9,7 +9,7 @@ colormode(255)
 lt(90)
 
 lv = 14
-l = 120
+le = 120
 s = 45
 
 width(lv)
@@ -21,12 +21,12 @@ b = 0
 pencolor(r, g, b)
 
 penup()
-bk(l)
+bk(le)
 pendown()
-fd(l)
+fd(le)
 
 
-def draw_tree(l, level):
+def draw_tree(bl, level):
     global r, g, b
     # save the current pen width
     w = width()
@@ -39,20 +39,20 @@ def draw_tree(l, level):
     b = b + 3
     pencolor(r % 200, g % 200, b % 200)
 
-    l = 3.0 / 4.0 * l
+    bl = 3.0 / 4.0 * bl
 
     lt(s)
-    fd(l)
+    fd(bl)
 
     if level < lv:
-        draw_tree(l, level + 1)
-    bk(l)
+        draw_tree(bl, level + 1)
+    bk(bl)
     rt(2 * s)
-    fd(l)
+    fd(bl)
 
     if level < lv:
-        draw_tree(l, level + 1)
-    bk(l)
+        draw_tree(bl, level + 1)
+    bk(bl)
     lt(s)
 
     # restore the previous pen width
@@ -61,6 +61,6 @@ def draw_tree(l, level):
 
 speed("fastest")
 
-draw_tree(l, 4)
+draw_tree(le, 4)
 
 done()

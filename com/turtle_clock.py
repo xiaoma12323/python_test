@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from turtle import *
-
 import time
+from turtle import *
 
 ht()
 
@@ -26,7 +25,6 @@ for i in range(12):
     left(90)
 
     for j in range(4):
-
         circle(-120, 6)
 
         right(90)
@@ -47,16 +45,13 @@ pendown()
 
 
 def pin(p, long, angle):
-
     p.left(90 - angle)
 
     p.forward(long)
 
 
-def undopin(p):
-
+def undo_pin(p):
     for _ in range(2):
-
         p.undo()
 
 
@@ -64,26 +59,25 @@ fen = clone()
 
 miao = clone()
 
-miaolong = 100
+sec_long = 100
 
-fenlong = 60
+min_long = 60
 
-miaoang = 0
+sec_ang = 0
 
-fenang = 0
+min_ang = 0
 
 while True:
 
-    pin(fen, fenlong, fenang)
+    pin(fen, min_long, min_ang)
 
     for i in range(60):
-
-        pin(miao, miaolong, miaoang + (i * 6))
+        pin(miao, sec_long, sec_ang + (i * 6))
 
         time.sleep(0.93)
 
-        undopin(miao)
+        undo_pin(miao)
 
-    undopin(fen)
+    undo_pin(fen)
 
-    fenang += 6
+    min_ang += 6
