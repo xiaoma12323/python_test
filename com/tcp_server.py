@@ -14,7 +14,7 @@ print('Waiting for connection...')
 
 
 def tcp_link(so, ad):
-    print('Accept new connection from %s: %s...' % addr)
+    print('Accept new connection from %s: %s...' % ad)
     so.send(b'Welcome!')
     while True:
         data = so.recv(1024)

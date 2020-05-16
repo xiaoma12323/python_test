@@ -12,6 +12,7 @@ print(s.recv(1024).decode('utf-8'))
 for data in [b'Michael', b'Trevor', b'Franklin']:
     # 发送数据
     s.send(data)
+    # 接受数据
     print(s.recv(1024).decode('utf-8'))
 
 s.send(b'exit')
