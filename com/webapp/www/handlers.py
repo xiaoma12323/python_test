@@ -5,10 +5,9 @@ import json
 import logging
 import re
 import time
+import markdown2
 
 from aiohttp import web
-
-import markdown2
 from apis import APIValueError, APIError, APIPermissionError, Page, APIResourceNotFoundError
 from config import configs
 from coroweb import get, post
