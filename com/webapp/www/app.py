@@ -16,9 +16,9 @@ from datetime import datetime
 from aiohttp import web
 from jinja2 import Environment, FileSystemLoader
 from coroweb import add_routes, add_static
-from handlers import cookie2user, COOKIE_NAME
 
 logging.basicConfig(level=logging.INFO)
+from handlers import cookie2user, COOKIE_NAME
 
 
 def init_jinja2(app, **kw):
